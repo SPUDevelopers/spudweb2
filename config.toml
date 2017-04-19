@@ -1,0 +1,63 @@
+baseURL = "http://shadow53.github.io/spudweb2/"
+languageCode = "en-us"
+title = "SPU Developers"
+#theme = "startbootstrap-clean-blog"
+theme = "BluestNight"
+canonifyurls = true
+paginate = 10
+PygmentsCodeFences = true
+PygmentsStyle = "igor"
+
+#[params]
+#  DateForm = "Mon, Jan 2, 2006"
+#  Description = "The very best of Seattle"
+#  Author = "SPU Developers"
+  #email = "benoit.benedetti@gmail.com" #Remove this line if you would prefer not to use an email button in the footer.
+#  postSummariesFrontPage = 4 #Number of post summaries to show on front page, comment out to allow default(4)
+#  showReadTime = true #set to false to exclude read time from header of post
+
+#[[params.social]]
+#  title = "github"
+#  url = "https://github.com/SPUDevelopers"
+
+[Author]
+    name = "SPU Developers"
+    bio = "A college student at Seattle Pacific University. Programmer. Christian. Geek. Blogger on the side."
+    avatar = "/images/avatar.jpg"
+
+[Params]
+    #tagline = "The very best of Seattle" # Subtitle of your site
+    tagline = "Warning: this site is a work in progress"
+    description = "The official website of the developers club at Seattle Pacific University" # Description of your site
+    authorbox = false
+    post_navigation = false
+    # HashOver requires PHP running on the server
+    # and cannot be hosted on a different domain
+    hashover = false
+
+
+#[Params.background]
+#    src = "/images/background.png"
+#    fit_width = true
+#    tile = false
+
+[Params.widgets]
+    search = false # Enable "Search" widget
+    recent_articles = true # Enable "Recent arcticles" widget
+    categories = true # Enable "Categories" widget
+    tags = true # Enable "Tags" widget
+    tags_counter = false
+    upcoming_events = true
+
+[Params.color]
+    page_background_color = "#555555"
+    main_background_color = "#eeeeee"
+    alt_background_color = "#c0c0c0"
+    body_text = "#222222"
+    alt_body_text = "#111111"
+    accent_color = "#FF201B"
+    header_text = "#eeeeee"
+
+# This enables the calendar .ics file generation
+[outputs]
+    home = ["HTML", "Calendar"]
