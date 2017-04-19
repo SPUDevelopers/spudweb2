@@ -1,14 +1,11 @@
 +++
 #date = "2017-04-18T12:08:05-07:00"
 draft = false
-title = "About"
+title = "About Us"
 menu = "main"
 weight = 5
 +++
 
-## Seattle Pacific University Developers
+We're a club. Of developers. At Seattle Pacific University. Not sure what else you were expecting.
 
-![Kainoa Seto](/images/profiles/kainoa.jpg)
-Kainoa Seto | Club President
-
-I'm Kainoa.
+You wanna see who's here? [Okay]({{< ref "members.md" >}}).
