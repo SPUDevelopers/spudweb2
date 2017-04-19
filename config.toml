@@ -7,18 +7,7 @@ canonifyurls = true
 paginate = 10
 PygmentsCodeFences = true
 PygmentsStyle = "igor"
-
-#[params]
-#  DateForm = "Mon, Jan 2, 2006"
-#  Description = "The very best of Seattle"
-#  Author = "SPU Developers"
-  #email = "benoit.benedetti@gmail.com" #Remove this line if you would prefer not to use an email button in the footer.
-#  postSummariesFrontPage = 4 #Number of post summaries to show on front page, comment out to allow default(4)
-#  showReadTime = true #set to false to exclude read time from header of post
-
-#[[params.social]]
-#  title = "github"
-#  url = "https://github.com/SPUDevelopers"
+enableRobotsTXT = true
 
 [Author]
     name = "SPU Developers"
