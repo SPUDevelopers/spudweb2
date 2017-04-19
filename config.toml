@@ -1,4 +1,4 @@
-baseURL = "http://shadow53.github.io/spudweb2/"
+baseURL = "https://spudweb2.netlify.com/"
 languageCode = "en-us"
 title = "SPU Developers"
 #theme = "startbootstrap-clean-blog"
