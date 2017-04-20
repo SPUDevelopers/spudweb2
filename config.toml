@@ -1,4 +1,4 @@
-baseURL = "https://spudevelopers.club"
+baseURL = "https://spudevelopers.club/"
 languageCode = "en-us"
 title = "SPU Developers"
 #theme = "startbootstrap-clean-blog"
