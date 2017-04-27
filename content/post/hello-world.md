@@ -1,9 +1,8 @@
 +++
 date = "2017-04-18T13:02:17-07:00"
 description = "This is the obligatory first post"
-disable_comments = true
 draft = false
-hide_authorbox = false
+author = "Kainoa Seto"
 thumbnail = ""
 title = "Hello, World!"
 

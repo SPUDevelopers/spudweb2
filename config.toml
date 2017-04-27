@@ -9,16 +9,11 @@ PygmentsCodeFences = true
 PygmentsStyle = "igor"
 enableRobotsTXT = true
 
-[Author]
-    name = "SPU Developers"
-    bio = "A college student at Seattle Pacific University. Programmer. Christian. Geek. Blogger on the side."
-    avatar = "/images/avatar.jpg"
-
 [Params]
     #tagline = "The very best of Seattle" # Subtitle of your site
     tagline = "Warning: this site is a work in progress"
     description = "The official website of the developers club at Seattle Pacific University" # Description of your site
-    authorbox = false
+    authorbox = true
     post_navigation = false
     # HashOver requires PHP running on the server
     # and cannot be hosted on a different domain

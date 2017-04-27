@@ -4,6 +4,7 @@ title = "Contributing to the SPU Developers Site"
 description = "Want to contribute to this site? Here's how."
 draft = false
 enable_toc = true
+author = "Michael Bryant"
 categories = ["How To"]
 +++
 
