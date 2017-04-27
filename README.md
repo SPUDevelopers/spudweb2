@@ -13,3 +13,5 @@ Alternatively, if you aren't sure how to implement the change or wish to just ma
 We currently use [Netlify](https://netlify.com) for hosting the website. The pages you see on the site are build using the current state of the `master` branch of this repository.
 
 The site uses the [BluestNight](https://github.com/Shadow53/BluestNight) theme by Shadow53.
+
+2017
