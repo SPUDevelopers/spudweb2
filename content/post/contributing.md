@@ -60,7 +60,7 @@ Begin by signing in to GitHub and accessing the [GitHub repository](https://gith
 
 {{< highlight bash >}}
 cd /path/to/save/project/in/
-git clone https://github.com/SPUDevelopers/spudweb2
+git clone --recursive https://github.com/SPUDevelopers/spudweb2
 {{< /highlight >}}
 
 Replace `/path/to/save/project/in/` with the location you want the project folder to be located in, e.g.:
