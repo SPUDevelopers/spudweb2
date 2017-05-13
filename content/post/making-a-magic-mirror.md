@@ -44,12 +44,13 @@ author = "Michael Bryant"
      - Said yes to using `pm2` for magic mirror autostarting
      - Ensure that `pm2` starts at boot (Some error message about `pm2` detected init and the selected one being different): `pm2 startup`
 1. Necessary extra packages:
-  - `xserver-xorg`
-  - `libgtk2.0-0`
-  - `libxtst6`
-  - `libxss1`
-  - `libgconf2-4`
-  - `libnss3`
+  - `xserver-xorg` - for graphical display
+  - `x11-xserver-utils` - for preventing blanking
+  - `libgtk2.0-0` - electron dependency
+  - `libxtst6` - electron dependency
+  - `libxss1` - electron dependency
+  - `libgconf2-4` - electron dependency
+  - `libnss3` - electron dependency
   - `sudo npm install -g electron` - to add to PATH
     - Said `UNMET PEER DEPENDENCY stylelint@^7.8.0` - means "compatible with" version
     - `npm install stylelint@^7.8.0` seems to work
