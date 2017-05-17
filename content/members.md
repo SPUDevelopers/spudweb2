@@ -10,4 +10,3 @@ weight = 4
 ## Officers
 {{< member "Kainoa Seto" >}}
 {{< member "Michael Bryant" >}}
-## Members
