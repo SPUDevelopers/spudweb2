@@ -1,6 +1,6 @@
 +++
 date = "2017-05-02T12:17:33-07:00"
-description = "We made a Magic Mirror for our club - here's how you can make one on your own!\nA Magic Mirror is "
+description = "We made a Magic Mirror for our club - here's how you can make one on your own!"
 disable_comments = false
 draft = true
 hide_authorbox = false
@@ -86,4 +86,4 @@ author = "Michael Bryant"
   - `sudo rm /etc/sudoers.d/010_pi-nopasswd`
     - This file allows `pi` to perform any command with sudo without a password
     - `pi` is in `sudo` group, so sudo is still available, just with password
-- `sudo passwd pi` - Enter password twice. No stars or other indicator of typing appears on screen, but it is typing.  
+- `sudo passwd pi` - Enter password twice. No stars or other indicator of typing appears on screen, but it is typing.
