@@ -31,7 +31,7 @@ enableRobotsTXT = true
     categories = true # Enable "Categories" widget
     tags = true # Enable "Tags" widget
     tags_counter = false
-    upcoming_events = true
+    upcoming_events = false
 
 [Params.color]
     page_background_color = "#555555"
@@ -41,6 +41,9 @@ enableRobotsTXT = true
     alt_body_text = "#111111"
     accent_color = "#FF201B"
     header_text = "#eeeeee"
+
+[Params.social]
+    github = "SPUDevelopers"
 
 # This enables the calendar .ics file generation
 [outputs]
