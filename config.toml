@@ -1,7 +1,6 @@
 baseURL = "https://spudevelopers.club/"
 languageCode = "en-us"
 title = "SPU Developers"
-#theme = "startbootstrap-clean-blog"
 theme = "BluestNight"
 canonifyurls = true
 paginate = 10
@@ -15,9 +14,7 @@ enableRobotsTXT = true
     description = "The official website of the developers club at Seattle Pacific University" # Description of your site
     authorbox = true
     post_navigation = false
-    # HashOver requires PHP running on the server
-    # and cannot be hosted on a different domain
-    hashover = false
+    muut = "spudevelopers"
 
 
 #[Params.background]
@@ -47,4 +44,4 @@ enableRobotsTXT = true
 
 # This enables the calendar .ics file generation
 [outputs]
-    home = ["HTML", "Calendar", "CSS"]
+    home = ["HTML", "Calendar", "CSS", "RSS"]
