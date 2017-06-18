@@ -23,7 +23,6 @@ enableRobotsTXT = true
 #    tile = false
 
 [Params.widgets]
-    search = false # Enable "Search" widget
     recent_articles = true # Enable "Recent arcticles" widget
     categories = true # Enable "Categories" widget
     tags = true # Enable "Tags" widget
@@ -31,16 +30,17 @@ enableRobotsTXT = true
     upcoming_events = false
 
 [Params.color]
-    page_background_color = "#555555"
-    main_background_color = "#eeeeee"
-    alt_background_color = "#c0c0c0"
-    body_text = "#222222"
-    alt_body_text = "#111111"
-    accent_color = "#FF201B"
-    header_text = "#eeeeee"
+    page_background = "#555555"
+    main_background = "#eeeeee"
+    alt_background = "#c0c0c0"
+    main_text = "#222222"
+    alt_text = "#111111"
+    accent = "#FF201B"
+    accent_text = "#eeeeee"
 
 [Params.social]
     github = "SPUDevelopers"
+    slack_org = "spudevelopers"
 
 # This enables the calendar .ics file generation
 [outputs]
