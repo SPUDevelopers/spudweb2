@@ -11,31 +11,26 @@ enableRobotsTXT = true
 [Params]
     #tagline = "The very best of Seattle" # Subtitle of your site
     tagline = "Warning: this site is a work in progress"
-    description = "The official website of the developers club at Seattle Pacific University" # Description of your site
+    description = "The official website of the developers club at Seattle Pacific University"
     authorbox = true
     post_navigation = false
     muut = "spudevelopers"
 
-
-#[Params.background]
-#    src = "/images/background.png"
-#    fit_width = true
-#    tile = false
-
 [Params.widgets]
-    recent_articles = true # Enable "Recent arcticles" widget
-    categories = true # Enable "Categories" widget
-    tags = true # Enable "Tags" widget
+    recent_articles = true
+    categories = true
+    tags = true
+    search = true
     tags_counter = false
     upcoming_events = false
 
 [Params.color]
-    page_background = "#555555"
+    page_background = "#4d5c6b"
     main_background = "#eeeeee"
-    alt_background = "#c0c0c0"
+    alt_background = "#b7b7b7"
     main_text = "#222222"
     alt_text = "#111111"
-    accent = "#FF201B"
+    accent = "#d1110e"
     accent_text = "#eeeeee"
 
 [Params.social]
@@ -44,4 +39,4 @@ enableRobotsTXT = true
 
 # This enables the calendar .ics file generation
 [outputs]
-    home = ["HTML", "Calendar", "CSS", "RSS"]
+    home = ["HTML", "Calendar", "CSS", "RSS", "JSON"]
