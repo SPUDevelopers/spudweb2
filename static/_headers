@@ -1,0 +1,10 @@
+/*
+X-Frame-Options: SAMEORIGIN
+X-Content-Type-Options: nosniff
+Content-Security-Policy: default-src 'self'; connect-src https:; style-src 'self' https://maxcdn.bootstrapcdn.com 'unsafe-inline'; font-src 'self' https://maxcdn.bootstrapcdn.com; img-src https:; script-src 'self' 'unsafe-inline' https://unpkg.com
+
+/*.html
+Expires: epoch
+
+/*.css /*.js /*.woff /*.woff2 /*.json /*.png /*.jpg /*.jpeg /*.gif
+Expires: max
