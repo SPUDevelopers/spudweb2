@@ -22,15 +22,22 @@ enableRobotsTXT = true
     tags = true
     search = true
     tags_counter = false
-    upcoming_events = false
+    upcoming_events = true
+
+[Params.background]
+    src = "images/background.jpg"
+    medium_src = "images/background_med.jpg"
+    small_src = "images/background_sm.jpg"
+    fit_width = false
+    tile = false
 
 [Params.color]
     page_background = "#4d5c6b"
     main_background = "#eeeeee"
-    alt_background = "#b7b7b7"
+    alt_background = "#333333"
     main_text = "#222222"
-    alt_text = "#111111"
-    accent = "#d1110e"
+    alt_text = "#eeeeee"
+    accent = "#812335"
     accent_text = "#eeeeee"
 
 [Params.social]
