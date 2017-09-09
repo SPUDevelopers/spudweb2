@@ -1,5 +1,10 @@
 Name     : "Michael Bryant"
 Img      : "/images/profiles/michael.jpg"
 Position : "Project Manager"
+URL      : "https://mnbryant.com/"
 Bio      : |
-  I'm Michael
+  Michael has been programming since his freshman year of high school.
+  He has a passion for open source and hosts his projects on his
+  [GitLab account](https://gitlab.com/Shadow53/), including
+  [BluestNight](https://gitlab.com/Shadow53/BluestNight/), the theme
+  used by this website.
