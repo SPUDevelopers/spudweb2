@@ -6,17 +6,20 @@ hide_authorbox = false
 disable_comments = true
 draft = true
 enable_toc = true
-categories = ["Tutorials"]
+categories = ["Guides"]
 alert = "Rather than recreate much of the documentation necessary for this process, this guide instead links to the official docs."
 +++
 
 Have something you want to share with the SPU Developers community, maybe a how-to guide, or a review of some cool program you found, or even outlining a program you wrote yourself? Something that would fit nicely on a website like this? Or maybe you found something odd on the site, some bug that needs to be fixed, and want to let us know.
 <!--more-->
+
 This website's source is [hosted on GitHub](https://github.com/SPUDevelopers/spudweb2), so it is easy to do all of the above.
 
 # Issues And Suggestions
 
 First of all, if you have a suggestion or a bug to report, let us know on the [GitHub issue tracker](https://github.com/SPUDevelopers/spudweb2/issues). This requires a GitHub account, which you can [register for free](https://github.com/join), if you don't already have one.
+
+## Issues
 
 If you're reporting a bug, please give sufficient details about what the bug is as well as how we can reproduce it. In particular, please include the following information:
 
@@ -25,14 +28,16 @@ If you're reporting a bug, please give sufficient details about what the bug is 
 - If the bug only appears under certain conditions or after specific actions are taken, please specify those here
   - For instance, if toggling the mobile menu on and off five times makes the toggle disappear, you should tell us that it happens only after toggling the menu five times.
 
+## Suggestions
+
 If you're providing a suggestion on how to improve the site, such as new behavior, content, or something else that is not a bug, please provide the following instead:
 
 - The suggestion itself
-- Why we should implement it - why would it be useful?
-- If applicable, how many people do you honestly expect to use the new behavior?
+- Why we should implement it - i.e. why would it be useful?
+- If applicable, how many people do you expect to use the new behavior?
 
 {{% alert %}}
-Because Hugo, the program we use to generate the website, separates themes from sites, some bugs and suggestions may not be able to be implemented by us. Bugs related to the theme should be directed there instead, and any features that do not apply solely to SPU Developers can be directed there as well.
+Because Hugo, the program we use to generate the website, separates themes from sites, some bugs and suggestions may not be able to be implemented by us. Bugs related to the theme should be directed there instead, and any features that do not apply solely to SPU Developers can be directed there as well. If you aren't sure how it applies, just send it to us.
 {{% /alert %}}
 
 # Content
@@ -44,19 +49,19 @@ Assuming you have received the go-ahead from a club leader to make your contribu
 - Set up [Hugo](http://gohugo.io/overview/installing/) ([Windows-specific directions](http://gohugo.io/tutorials/installing-on-windows/))
 - Set up a Git environment on your computer. For Windows and Mac, we recommend using the [GitHub Desktop](https://desktop.github.com) application.
 - Familiarize yourself with using Hugo. Some helpful links in the Hugo docs (though you should explore some of the other pages, too!):
-  - [Introduction](http://gohugo.io/overview/introduction/)
-  - [Usage](http://gohugo.io/overview/usage/)
-  - [Front Matter](http://gohugo.io/content/front-matter/) (aka page metadata)
-  - [Content Organization](http://gohugo.io/content/organization/)
+  - [Getting Started](http://gohugo.io/getting-started/)
+  - [Usage](http://gohugo.io/getting-started/usage/)
+  - [Front Matter](http://gohugo.io/content-management/front-matter/) (aka page metadata)
+  - [Content Management](http://gohugo.io/content-management/)
 
 That's a lot of content in a lot of links, so we'll wait here while you go through all of it.
 
 You're done? Cool. Let's move on.
 
-From here, I'm assuming that you have Hugo and Git set up on your machine following the instructions linked above.
+From here, we're assuming that you have Hugo and Git set up on your machine following the instructions linked above.
 
 {{% alert %}}
-**Note to Windows users:** All `git` commands should be run using "Git bash", which is available when you install GitHub desktop or Git for Windows. All `hugo` commands can be run using Command Prompt.
+**Note to Windows users:** All `git` commands should be run using the "Git bash" program, which is available when you install GitHub desktop or Git for Windows. All `hugo` commands can be run using Command Prompt.
 {{% /alert %}}
 
 ## Forking and Cloning the Repository
@@ -75,15 +80,15 @@ Replace `/path/to/save/project/in/` with the location you want the project folde
   - Windows: `C:/Users/Username/Documents/`
     - Replace `Username` with your username
 
-Also be sure to substitute the URL with the one for your forked version.
+**Also be sure to substitute the URL with the one for your forked version.**
 
 ## Loading the Local Hugo Site
 
-Next, open your terminal emulator or Command Prompt and navigate to the root of the local version of the repository (examples using the above examples):
+Next, open your terminal emulator or Command Prompt and navigate to the root of the local version of the repository (examples using the above example directories):
 
  - Linux/Mac: `cd ~/Documents/spudweb2/`
  - Windows: `cd C:/Users/Username/Documents/spudweb2/`
- - If you cloned the repository through GitHub Desktop, the path you want may end with something like `Documents/"GitHub Desktop"/spudweb2/`
+ - If you cloned the repository through GitHub Desktop, the path you want may look something like `C:/Users/Username/Documents/"GitHub Desktop"/spudweb2/`
 
 You are now at the root of the Hugo site. If you type `ls` (Linux/Mac) or `dir` (Windows), you should see something like this:
 
@@ -124,6 +129,7 @@ If you feel like it, open up the file under `content/post/hello-world.md` and ma
 From the root of the local repository, you can create a new page of content using the `hugo new` command in your terminal/Command Prompt:
 
 {{< highlight bash >}}
+# Syntax is "hugo new" followed by a path relative to the content/ folder
 # Don't forget the .md file extension!
 hugo new post/hello-world-v2.md
 {{< /highlight >}}
@@ -149,15 +155,19 @@ title = "hello world v2"
 This is the page's [front matter](https://gohugo.io/content/front-matter/), or metadata. Some of the lines above are page variables used in the site's current theme and may not appear if we change to a new theme. Some notes about these variables:
 
 - `draft`: When set to `true`, this page isn't generated by Hugo (because it's a draft). Remove the line or set it to `false` to have the page appear on the site.
-- `title`: This is automatically generated by Hugo based on the file name. I like to keep the file names all lowercase, but this means capitalizing the words in this variable, i.e. `title = "Hello, World! v2"`
+- `title`: This is automatically generated by Hugo based on the file name. I like to keep the file names all lowercase, but this means manually capitalizing the words in this variable, i.e. `title = "Hello, World! v2"`
 - `description`: This is the description of the page as will appear on search engines. Keep it short but descriptive.
 - `date`: This is a particularly formatted time string, based on the moment you create the file. If you take more than a day to finish the page, modify this string to match the current date/time.
   - The string follows the format of (YEAR-MONTH-DAY)("T")(24-HOUR TIME)(TIME ZONE)
 - `hide_authorbox` and `disable_comments` are features of the theme we use and can be ignored because we (currently) don't use comments and authorboxes don't appear unless an `author` has been specified.
 
+{{% alert %}}
+The theme we use comes with its own set of [front-matter variables](https://bluestnight.shadow53.com/docs/pages/) that provide some extra functionality to the page.
+{{% /alert %}}
+
 ### The Page Content
 
-Pages on Hugo sites are formatted using a syntax called Markdown. Markdown allows text to be readable whether the formatting has been processed or not. For reference, check out this very page [in Markdown](https://raw.githubusercontent.com/SPUDevelopers/spudweb2/master/content/post/contributing.md). It's not always the prettiest, but it's *much* better than trying to read HTML.
+Pages on Hugo sites are formatted using a syntax called Markdown. Markdown allows text to be readable whether the formatting has been processed or not. For reference, check out this very page [in Markdown](https://raw.githubusercontent.com/SPUDevelopers/spudweb2/master/content/guide/website/contributing.md). It's not always the prettiest, but it's *much* better than trying to read HTML.
 
 If you aren't familiar with Markdown, take a moment to look at these guides to the [basic](https://www.markdownguide.org/basic-syntax) Markdown syntax. There are also non-standard extensions to the Markdown syntax. [Click here](https://github.com/russross/blackfriday#extensions) to view which extensions Hugo's markdown parser supports.
 
@@ -226,14 +236,20 @@ The `ref` and `relref` shortcodes are useful for generating the URL to another p
 
 becomes: [Click me!]({{< ref "post/hello-world.md" >}})
 
+{{% alert %}}
+The theme we use comes with [its own shortcodes](https://bluestnight.shadow53.com/docs/shortcodes/) as well.
+{{% /alert %}}
+
 ## Submitting Your Changes (Pull Request)
 
 When you've made whatever changes you'd like to submit to the site, the next step is to commit your local changes and push them to your fork of the repository. Here are instructions for [committing](https://help.github.com/desktop/guides/contributing/committing-and-reviewing-changes-to-your-project/) changes in GitHub Desktop and [syncing](https://help.github.com/desktop/guides/contributing/syncing-your-branch/) with the server.
 
-For people using commandline Git (or Git Bash on Windows!), the commands you want to use are `git add`, `git commit`, and `git push`, like so (using `hello-world-v2.md` as the example):
+For people using command-line Git (or Git Bash on Windows!), the commands you want to use are `git add`, `git commit`, and `git push`, like so (using `hello-world-v2.md` as the example):
 
 {{< highlight bash >}}
 git add content/post/hello-world-v2.md
+# Provides an inline commit message. Use just "git commit" to
+# write a multiline message in a text editor.
 git commit -m "Added a second hello world post"
 git push origin master
 {{< /highlight >}}
