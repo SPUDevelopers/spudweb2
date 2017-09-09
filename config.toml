@@ -5,7 +5,6 @@ theme = "BluestNight"
 canonifyurls = true
 paginate = 10
 PygmentsCodeFences = true
-PygmentsStyle = "igor"
 enableRobotsTXT = true
 
 [Params]
