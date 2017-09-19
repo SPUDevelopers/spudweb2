@@ -2,12 +2,12 @@
 title = "New Member Survey"
 hide_authorbox = true
 disable_comments = true
-draft = true
 +++
 
 {{< netlify-form name="New Members" >}}
   {{< form-input type="text" label="First Name" id="first-name" placeholder="John" required="true" >}}
   {{< form-input type="text" label="Last Name" id="last-name" placeholder="Smith" required="true" >}}
+  {{< form-input type="text" label="Email" id="email" placeholder="smithj5@spu.edu" >}}
 
   {{< mult-input type="radio" name="is-cs" label="Are you, or will you be, in the Computer Science major at SPU?" required="true" >}}
     {{< form-option label="I am currently enrolled in the CS major." value="In major" >}}
@@ -28,6 +28,11 @@ draft = true
     {{< form-option label="Poster/Flier" value="poster/flier" >}}
     {{< form-option label="Recommended by a professor" value="Professor recommendation" >}}
     {{< form-option label="Recommended by a friend" value="Friend recommendation" >}}
+  {{< /mult-input >}}
+
+  {{< mult-input type="radio" name="contact-email" label="If you entered your email above, can we use it to send you updates about the club?" required="true" >}}
+    {{< form-option label="Yes" value="true" >}}
+    {{< form-option label="No" value="false" >}}
   {{< /mult-input >}}
 
 {{< /netlify-form >}}

@@ -14,6 +14,7 @@ enableRobotsTXT = true
     authorbox = true
     post_navigation = false
     muut = "spudevelopers"
+    alert = "New to SPU Developers? Interested in joining? Fill out this [new member survey](/new-member-survey/)."
 
 [Params.widgets]
     recent_articles = true
@@ -22,6 +23,19 @@ enableRobotsTXT = true
     search = true
     tags_counter = false
     upcoming_events = true
+
+# We collect user information in a form and through comments,
+# therefore we need a privacy privacy-policy
+[Params.iubenda]
+    id = "8219382"
+    legal_only = false
+
+[Params.iubenda.pro]
+    enable_pro = true
+    site_id = "908105"
+    enable_cookie_policy = true
+    disable_footer_link = true
+    prior_consent = true
 
 [Params.background]
     src = "images/background.jpg"
@@ -33,9 +47,9 @@ enableRobotsTXT = true
 [Params.color]
     page_background = "#4d5c6b"
     main_background = "#eeeeee"
-    alt_background = "#333333"
+    alt_background = "#aaaaaa"
     main_text = "#222222"
-    alt_text = "#eeeeee"
+    alt_text = "#222222"
     accent = "#812335"
     accent_text = "#eeeeee"
 

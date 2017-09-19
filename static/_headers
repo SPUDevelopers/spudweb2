@@ -1,7 +1,7 @@
 /*
 X-Frame-Options: SAMEORIGIN
 X-Content-Type-Options: nosniff
-Content-Security-Policy: default-src 'self'; connect-src https:; style-src 'self' https://maxcdn.bootstrapcdn.com https://cdn.muut.com 'unsafe-inline'; font-src 'self' https://maxcdn.bootstrapcdn.com; img-src https:; script-src 'self' 'unsafe-inline' https://code.jquery.com https://unpkg.com https://cdn.muut.com
+Content-Security-Policy: default-src 'self'; connect-src https:; style-src 'self' https://maxcdn.bootstrapcdn.com https://cdn.muut.com 'unsafe-inline'; font-src 'self' https://maxcdn.bootstrapcdn.com; img-src https:; script-src 'self' 'unsafe-inline' https://code.jquery.com https://unpkg.com https://cdn.muut.com https://cdn.iubenda.com https://www.iubenda.com
 
 /*.html
 Expires: epoch
