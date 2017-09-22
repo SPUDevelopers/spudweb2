@@ -9,16 +9,18 @@ title = "Making a Magic Mirror"
 author = "Michael Bryant"
 +++
 
-# Need directions on using a different user than the default
-
 1. Download Raspbian from https://downloads.raspberrypi.org/raspbian_lite_latest
-  - Used the lite version because we don't need all of the extra stuff in the PIXEL edition
-1. Use [this guide](https://www.raspberrypi.org/documentation/installation/installing-images/README.md) to install the image to the SD card
-1. Default user/pass is pi/raspberry
-   - Defaults to sudo access without password confirmation?
-1. Set up WiFi by editing /etc/wpa_supplicant/wpa_supplicant.conf (from https://thepihut.com/blogs/raspberry-pi-tutorials/83502916-how-to-setup-wifi-on-raspbian-jessie-lite)
+  - We use the lite version because we don't need all of the extra stuff in the PIXEL edition.
+1. Use [this guide](https://www.raspberrypi.org/documentation/installation/installing-images/README.md) to install the image to the SD card.
+1. Login using the default login:
+   - User: `pi`
+   - Pass: `raspberry`
+1. Set up WiFi by editing `/etc/wpa_supplicant/wpa_supplicant.conf` (from [The Pi Hut](https://thepihut.com/blogs/raspberry-pi-tutorials/83502916-how-to-setup-wifi-on-raspbian-jessie-lite))
+   - Open the file using `nano`.
+   {{< highlight bash >}}# sudo nano /etc/wpa_supplicant/wpa_supplicant.conf{{< /highlight >}}
+
+   - Make sure it contains the following text. Replace `NETWORK_SSID` with the SSID (name) of the WiFi network and `NETWORK_PASSPHRASE` with the passphrase for that SSID.
    {{< highlight bash >}}
-   # sudo nano /etc/wpa_supplicant/wpa_supplicant.conf
    country=US
    ctrl_interface=DIR=/var/run/wpa_supplicant GROUP=netdev
    update_config=1
@@ -26,8 +28,10 @@ author = "Michael Bryant"
      ssid="NETWORK_SSID"
      psk="NETWORK_PASSPHRASE"
    }
-   # sudo reboot
    {{< /highlight >}}
+
+   - Restart the Raspberry Pi.
+   {{< highlight bash >}}# sudo reboot{{< /highlight >}}
    - [Better method](https://www.raspberrypi.org/documentation/configuration/wireless/wireless-cli.md)
 1. Weird keyboard locale issue where double quote was swapped with "@" (but single quote and 2 were normal)
    1. `ls /usr/share/X11/xkb/symbols/` lists the various keyboard layouts
