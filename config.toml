@@ -4,6 +4,7 @@ title = "SPU Developers"
 theme = "BluestNight"
 canonifyurls = true
 paginate = 10
+PygmentsStyle = "igor"
 PygmentsCodeFences = true
 enableRobotsTXT = true
 
