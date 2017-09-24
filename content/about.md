@@ -8,4 +8,4 @@ weight = 5
 
 We're a club. Of developers. At Seattle Pacific University. Not sure what else you were expecting.
 
-You wanna see who's here? [Okay]({{< ref "members.md" >}}).
+You wanna see who's here? [Okay]({{< ref "officers.md" >}}).
