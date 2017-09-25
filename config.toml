@@ -10,12 +10,12 @@ enableRobotsTXT = true
 
 [Params]
     #tagline = "The very best of Seattle" # Subtitle of your site
-    tagline = "Warning: this site is a work in progress"
+    #tagline = "Warning: this site is a work in progress"
     description = "The official website of the developers club at Seattle Pacific University"
     authorbox = true
     post_navigation = false
     muut = "spudevelopers"
-    alert = "New to SPU Developers? Interested in joining? Fill out this [new member survey](/new-member-survey/)."
+    alert = "New to SPU Developers? Interested in learning more? [Join our mailing list](/join-mailing-list/)."
 
 [Params.widgets]
     recent_articles = true

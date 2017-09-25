@@ -1,7 +1,8 @@
 +++
-title = "New Member Survey"
+title = "Join Our Mailing List"
 hide_authorbox = true
 disable_comments = true
+aliases = ["/new-member-survey/"]
 +++
 
 {{< netlify-form name="New Members" >}}
