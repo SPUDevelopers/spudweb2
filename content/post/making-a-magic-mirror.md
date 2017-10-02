@@ -59,6 +59,7 @@ author = "Michael Bryant"
     - Said `UNMET PEER DEPENDENCY stylelint@^7.8.0` - means "compatible with" version
     - `npm install stylelint@^7.8.0` seems to work
     - `sudo pm2 startup systemd` - The install script assumes "linux" as the startup type instead of "systemd"
+    - `sudo pm2 startup systemd -u pi --hp /home/pi`
 1. For local development, may be worth using the [Docker image](https://github.com/MichMich/MagicMirror#docker)
 1. Also, for updating: https://github.com/MichMich/MagicMirror#updating-your-magicmirror
 1. And configuration: https://github.com/MichMich/MagicMirror#configuration
