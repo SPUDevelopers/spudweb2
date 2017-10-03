@@ -20,15 +20,15 @@ author = "Michael Bryant"
    {{< highlight bash >}}# sudo nano /etc/wpa_supplicant/wpa_supplicant.conf{{< /highlight >}}
 
    - Make sure it contains the following text. Replace `NETWORK_SSID` with the SSID (name) of the WiFi network and `NETWORK_PASSPHRASE` with the passphrase for that SSID.
-   {{< highlight bash >}}
-   country=US
-   ctrl_interface=DIR=/var/run/wpa_supplicant GROUP=netdev
-   update_config=1
-   network={
-     ssid="NETWORK_SSID"
-     psk="NETWORK_PASSPHRASE"
-   }
-   {{< /highlight >}}
+{{< highlight bash >}}
+country=US
+ctrl_interface=DIR=/var/run/wpa_supplicant GROUP=netdev
+update_config=1
+network={
+  ssid="NETWORK_SSID"
+  psk="NETWORK_PASSPHRASE"
+}
+{{< /highlight >}}
 
    - Restart the Raspberry Pi.
    {{< highlight bash >}}# sudo reboot{{< /highlight >}}
@@ -56,9 +56,9 @@ author = "Michael Bryant"
   - `libgconf2-4` - electron dependency
   - `libnss3` - electron dependency
   - `sudo npm install -g electron` - to add to PATH
-    - Said `UNMET PEER DEPENDENCY stylelint@^7.8.0` - means "compatible with" version
-    - `npm install stylelint@^7.8.0` seems to work
-    - `sudo pm2 startup systemd` - The install script assumes "linux" as the startup type instead of "systemd"
+     - Said `UNMET PEER DEPENDENCY stylelint@^7.8.0` - means "compatible with" version
+     - `npm install stylelint@^7.8.0` seems to work
+     - `sudo pm2 startup systemd -u pi --hp /home/pi` - The install script assumes "linux" as the startup type instead of "systemd"
 1. For local development, may be worth using the [Docker image](https://github.com/MichMich/MagicMirror#docker)
 1. Also, for updating: https://github.com/MichMich/MagicMirror#updating-your-magicmirror
 1. And configuration: https://github.com/MichMich/MagicMirror#configuration
@@ -68,19 +68,23 @@ author = "Michael Bryant"
 - Install `xinit` and `openbox`
 - `cp /etc/X11/xinit/xinitrc ~/.xinitrc`
 - Edit `~/.xinitrc` and add this to the end: (no blanking from https://www.raspberrypi.org/forums/viewtopic.php?f=66&t=18200)
-  ```
-  xset s off # don't activate screensaver
-  xset -dpms # disable DPMS (Energy Star) features.
-  xset s noblank # don't blank the video device
-  exec openbox-session
-  ```
+
+```
+xset s off # don't activate screensaver
+xset -dpms # disable DPMS (Energy Star) features.
+xset s noblank # don't blank the video device
+exec openbox-session
+```
+
 - Automatic login instructions thanks to [this forum post](http://forums.debian.net/viewtopic.php?f=16&t=123694)
   - Edit the file `/etc/systemd/system/getty@tty1.service.d/override.conf` and add these contents:
+
     ```
     [Service]
     ExecStart=
     ExecStart=-/sbin/agetty --autologin pi --noclear %I $TERM
     ```
+
   - Add `[ "$(tty)" = "/dev/tty1" ] && exec startx -- -nocursor` to the end of user's `~/.profile`
     - Makes so cursor doesn't appear over magic mirror display (only disappeared when trying to move it)
 - To modify any system settings, boot the Pi and hit Ctrl+Alt+F2 to go to a TTY, and Ctrl+Alt+F1 to go back to the magic mirror

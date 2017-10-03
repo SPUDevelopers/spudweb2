@@ -61,3 +61,4 @@ enableRobotsTXT = true
 # This enables the calendar .ics file generation
 [outputs]
     home = ["HTML", "Calendar", "CSS", "RSS", "JSON"]
+    section = ["HTML", "RSS"]
