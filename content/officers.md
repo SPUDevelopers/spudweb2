@@ -9,6 +9,6 @@ weight = 4
 aliases = ["/members/"]
 +++
 
-{{< member "Kainoa Seto" >}}
-{{< member "Keana Fine" >}}
-{{< member "Michael Bryant" >}}
+{{< member name="Kainoa Seto" noborder="true" >}}
+{{< member name="Keana Fine" noborder="true" >}}
+{{< member name="Michael Bryant" noborder="true" >}}
