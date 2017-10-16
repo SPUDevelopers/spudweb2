@@ -1,0 +1,5 @@
+name = "Git Workshop"
+location = "OMH 119"
+startDatetime = 2017-10-18T17:00:00-07:00
+endDatetime = 2017-10-18T18:00:00-07:00
+description = "Our first workshop! Learn how to use the Git version control system - required knowledge to contribute to SPUD projects."

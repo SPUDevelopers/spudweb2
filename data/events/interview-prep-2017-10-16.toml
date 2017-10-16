@@ -1,0 +1,5 @@
+name = "Interview Prep"
+location = "OMH 245"
+startDatetime = 2017-10-16T17:00:00-07:00
+endDatetime = 2017-10-16T18:00:00-07:00
+description = "Practice for coding interviews with real-life interview questions."
