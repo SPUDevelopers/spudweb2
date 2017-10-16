@@ -58,6 +58,9 @@ enableRobotsTXT = true
     github = "SPUDevelopers"
     slack_org = "spudevelopers"
 
+[Params.slack]
+    team_id = "T26H3LSHZ"
+
 # This enables the calendar .ics file generation
 [outputs]
     home = ["HTML", "Calendar", "CSS", "RSS", "JSON"]
