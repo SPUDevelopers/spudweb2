@@ -5,7 +5,7 @@ draft = false
 author = "Kainoa Seto"
 thumbnail = ""
 title = "Hello, World!"
-
+aliases = ["/post/hello-world/"]
 +++
 
 {{< highlight cpp >}}

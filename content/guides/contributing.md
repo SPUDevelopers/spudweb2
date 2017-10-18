@@ -8,6 +8,7 @@ draft = false
 enable_toc = true
 categories = ["Guides"]
 alert = "Rather than recreate much of the documentation necessary for this process, this guide instead links to the official docs."
+aliases = ["/guide/website/contributing/"]
 +++
 
 Have something you want to share with the SPU Developers community, maybe a how-to guide, or a review of some cool program you found, or even outlining a program you wrote yourself? Something that would fit nicely on a website like this? Or maybe you found something odd on the site, some bug that needs to be fixed, and want to let us know.
@@ -122,7 +123,7 @@ Open your favorite web browser and navigate to <http://localhost:1313/>. You sho
 
 Wow.
 
-If you feel like it, open up the file under `content/post/hello-world.md` and make some changes to it, then save it. Go back to the local tab and visit the [Hello, World!](http://localhost:1313/post/hello-world/) post.
+If you feel like it, open up the file under `content/posts/hello-world.md` and make some changes to it, then save it. Go back to the local tab and visit the [Hello, World!](http://localhost:1313/posts/hello-world/) post.
 
 ## Creating New content
 
@@ -131,10 +132,10 @@ From the root of the local repository, you can create a new page of content usin
 {{< highlight bash >}}
 # Syntax is "hugo new" followed by a path relative to the content/ folder
 # Don't forget the .md file extension!
-hugo new post/hello-world-v2.md
+hugo new posts/hello-world-v2.md
 {{< /highlight >}}
 
-If the local repository is found at `~/Documents/spudweb2/`, the new file will be created under `~/Documents/spudweb2/content/post/hello-world-v2.md`.
+If the local repository is found at `~/Documents/spudweb2/`, the new file will be created under `~/Documents/spudweb2/content/posts/hello-world-v2.md`.
 
 ### The Front Matter
 
@@ -231,10 +232,10 @@ Perhaps an example that doesn't involve syntax-highlighting code that syntax-hig
 The `ref` and `relref` shortcodes are useful for generating the URL to another page on the site by filename. For instance, using the [Hello, World!] post as an example:
 
 ```
-[Click me!]({{</* ref "post/hello-world.md" */>}})
+[Click me!]({{</* ref "posts/hello-world.md" */>}})
 ```
 
-becomes: [Click me!]({{< ref "post/hello-world.md" >}})
+becomes: [Click me!]({{< ref "posts/hello-world.md" >}})
 
 {{% alert %}}
 The theme we use comes with [its own shortcodes](https://bluestnight.shadow53.com/docs/shortcodes/) as well.
@@ -247,7 +248,7 @@ When you've made whatever changes you'd like to submit to the site, the next ste
 For people using command-line Git (or Git Bash on Windows!), the commands you want to use are `git add`, `git commit`, and `git push`, like so (using `hello-world-v2.md` as the example):
 
 {{< highlight bash >}}
-git add content/post/hello-world-v2.md
+git add content/posts/hello-world-v2.md
 # Provides an inline commit message. Use just "git commit" to
 # write a multiline message in a text editor.
 git commit -m "Added a second hello world post"
