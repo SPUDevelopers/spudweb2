@@ -1,6 +1,7 @@
 +++
 title = "Getting Started With Git"
 date = "2017-10-17T20:03:45-07:00"
+lastmod = "2017-11-06T15:44:45-07:00"
 hide_authorbox = true
 disable_comments = true
 draft = false
@@ -169,6 +170,10 @@ $ git commit -m "Hello, World!"
 If you accidentally committed something, and want to undo the commit, you can use the command `git reset HEAD~1`. This will remove the last commit while leaving the changes intact. It will **not** work if you are trying to undo the only commit in the repository. If you want to **add** something to the commit you just made, just add the changes to staging and use `git commit --amend` - it will overwrite the previous commit with the new changes.
 {{% /alert %}}
 
+## View Commit History
+
+To view the history of commits in a particular branch, run the command `git log`. Hit the `q` key to exit the view.
+
 ## Creating Branches
 
 Branches are Git's way of separating out different work items. Branches create their own commit history starting from the time of branching, thus allowing you to switch what you are working on without losing all of the changes you made to something else. The "main" branch of a Git repository is usually the `master` branch, while work tends to happen in other branches. A normal repository might look something like this, for instance:
@@ -249,6 +254,41 @@ The downloaded repository contains the current state, as well as all history and
 
 {{% alert %}}
 If you use the example repository above, you'll find that you're unable to `push` any changes as explained below. In order to practice updating the remote repository, you'll need to create your own on [GitHub](https://github.com/) ([Docs](https://help.github.com/articles/creating-a-new-repository/)) or a similar site and clone that one.
+{{% /alert %}}
+
+## Adding An Upstream URL
+
+You may already have an existing repository on your machine that you want to now have hosted on a website such as GitHub. At first, you may think you need to follow these steps to put use that repository:
+
+1. Create the repository on GitHub
+1. Clone the repository to your machine
+1. Copy the files from the existing repository to the new one
+1. Commit all changes and send the changes back to GitHub
+
+This method would technically work, but you would lose all of the commit history for that repository. Instead, you can change the upstream ("origin") URL by running these commands from inside the *existing* repository:
+
+```bash
+$ git remote add origin [url]
+$ git push origin
+```
+
+If the URL for my new repository is `https://github.com/SPUDevelopers/hello-world.git`, then the full commands to run to make my existing repository available there are:
+
+```bash
+$ git remote add origin https://github.com/SPUDevelopers/hello-world.git
+$ git push origin
+```
+
+Verify that the URL has been set using the command `git remote -v`:
+
+```bash
+$ git remote -v
+origin	https://github.com/SPUDevelopers/hello-world.git (fetch)
+origin	https://github.com/SPUDevelopers/hello-world.git (push)
+```
+
+{{% alert %}}
+Whichever code hosting website you use, it should remind you of these instructions for using an existing repository and give you the correct URL to use.
 {{% /alert %}}
 
 ## Updating The Local Copy
