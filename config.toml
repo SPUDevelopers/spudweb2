@@ -6,6 +6,8 @@ canonifyurls = true
 paginate = 10
 PygmentsStyle = "igor"
 PygmentsCodeFences = true
+PygmentsUseClasses = true
+PygmentsOptions = ""
 enableRobotsTXT = true
 
 [Params]
@@ -20,7 +22,7 @@ enableRobotsTXT = true
 [Params.widgets]
     recent_articles = true
     categories = true
-    tags = true
+    #tags = true
     search = true
     tags_counter = false
     upcoming_events = true
